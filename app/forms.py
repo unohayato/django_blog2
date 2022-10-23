@@ -1,5 +1,5 @@
 from django import forms
 
 class PostForm(forms.Form):
-  title = forms.CharField('タイトル', max_lengh=200) 
-  content = forms.CharField('内容')
+  title = forms.CharField(max_lengh=30, label='タイトル') 
+  content = forms.CharField(label = '内容', widget=forms.Textarea)
